@@ -1,0 +1,281 @@
+perturbed_criterion,perturbation,tech_id,technology_name,score,rank
+market_growth_potential,minus20,T01,AI/ML for Predictive Maintenance,76.58,1
+market_growth_potential,minus20,T02,Robotic Nuclear Inspection Systems,63.95,3
+market_growth_potential,minus20,T03,Inspection & Survey Drones (UAV/UUV),63.01,4
+market_growth_potential,minus20,T04,Digital Twins for Nuclear Plants,62.46,6
+market_growth_potential,minus20,T05,VR/AR Workforce Training,47.94,9
+market_growth_potential,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.15,7
+market_growth_potential,minus20,T07,Smart Materials & Advanced Sensor Coatings,38.17,12
+market_growth_potential,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.67,2
+market_growth_potential,minus20,T09,Medical Isotope Production,48.54,8
+market_growth_potential,minus20,T10,Nuclear Waste Management Technologies,32.5,14
+market_growth_potential,minus20,T11,Decommissioning Technologies,46.92,10
+market_growth_potential,minus20,T12,Small Modular Reactors (SMRs),62.84,5
+market_growth_potential,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",39.42,11
+market_growth_potential,minus20,T14,Fusion Energy Technologies,33.73,13
+market_growth_potential,plus20,T01,AI/ML for Predictive Maintenance,77.82,1
+market_growth_potential,plus20,T02,Robotic Nuclear Inspection Systems,63.21,5
+market_growth_potential,plus20,T03,Inspection & Survey Drones (UAV/UUV),62.32,6
+market_growth_potential,plus20,T04,Digital Twins for Nuclear Plants,64.45,4
+market_growth_potential,plus20,T05,VR/AR Workforce Training,45.39,10
+market_growth_potential,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.87,7
+market_growth_potential,plus20,T07,Smart Materials & Advanced Sensor Coatings,36.14,12
+market_growth_potential,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.84,2
+market_growth_potential,plus20,T09,Medical Isotope Production,48.62,8
+market_growth_potential,plus20,T10,Nuclear Waste Management Technologies,30.78,14
+market_growth_potential,plus20,T11,Decommissioning Technologies,47.09,9
+market_growth_potential,plus20,T12,Small Modular Reactors (SMRs),64.81,3
+market_growth_potential,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.33,11
+market_growth_potential,plus20,T14,Fusion Energy Technologies,34.6,13
+strategic_fit,minus20,T01,AI/ML for Predictive Maintenance,76.39,1
+strategic_fit,minus20,T02,Robotic Nuclear Inspection Systems,62.3,4
+strategic_fit,minus20,T03,Inspection & Survey Drones (UAV/UUV),61.35,6
+strategic_fit,minus20,T04,Digital Twins for Nuclear Plants,62.16,5
+strategic_fit,minus20,T05,VR/AR Workforce Training,46.55,10
+strategic_fit,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,53.42,7
+strategic_fit,minus20,T07,Smart Materials & Advanced Sensor Coatings,36.7,12
+strategic_fit,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.03,2
+strategic_fit,minus20,T09,Medical Isotope Production,48.53,8
+strategic_fit,minus20,T10,Nuclear Waste Management Technologies,30.99,14
+strategic_fit,minus20,T11,Decommissioning Technologies,46.9,9
+strategic_fit,minus20,T12,Small Modular Reactors (SMRs),62.55,3
+strategic_fit,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.96,11
+strategic_fit,minus20,T14,Fusion Energy Technologies,35.37,13
+strategic_fit,plus20,T01,AI/ML for Predictive Maintenance,78.0,1
+strategic_fit,plus20,T02,Robotic Nuclear Inspection Systems,64.87,4
+strategic_fit,plus20,T03,Inspection & Survey Drones (UAV/UUV),63.98,6
+strategic_fit,plus20,T04,Digital Twins for Nuclear Plants,64.74,5
+strategic_fit,plus20,T05,VR/AR Workforce Training,46.78,10
+strategic_fit,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,56.6,7
+strategic_fit,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.61,12
+strategic_fit,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),66.48,2
+strategic_fit,plus20,T09,Medical Isotope Production,48.63,8
+strategic_fit,plus20,T10,Nuclear Waste Management Technologies,32.29,14
+strategic_fit,plus20,T11,Decommissioning Technologies,47.11,9
+strategic_fit,plus20,T12,Small Modular Reactors (SMRs),65.1,3
+strategic_fit,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.78,11
+strategic_fit,plus20,T14,Fusion Energy Technologies,32.96,13
+technical_feasibility,minus20,T01,AI/ML for Predictive Maintenance,76.58,1
+technical_feasibility,minus20,T02,Robotic Nuclear Inspection Systems,62.59,5
+technical_feasibility,minus20,T03,Inspection & Survey Drones (UAV/UUV),61.65,6
+technical_feasibility,minus20,T04,Digital Twins for Nuclear Plants,63.37,4
+technical_feasibility,minus20,T05,VR/AR Workforce Training,45.21,10
+technical_feasibility,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.6,7
+technical_feasibility,minus20,T07,Smart Materials & Advanced Sensor Coatings,37.26,12
+technical_feasibility,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.31,2
+technical_feasibility,minus20,T09,Medical Isotope Production,48.09,8
+technical_feasibility,minus20,T10,Nuclear Waste Management Technologies,30.68,14
+technical_feasibility,minus20,T11,Decommissioning Technologies,46.47,9
+technical_feasibility,minus20,T12,Small Modular Reactors (SMRs),63.75,3
+technical_feasibility,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.51,11
+technical_feasibility,minus20,T14,Fusion Energy Technologies,35.1,13
+technical_feasibility,plus20,T01,AI/ML for Predictive Maintenance,77.82,1
+technical_feasibility,plus20,T02,Robotic Nuclear Inspection Systems,64.58,3
+technical_feasibility,plus20,T03,Inspection & Survey Drones (UAV/UUV),63.68,5
+technical_feasibility,plus20,T04,Digital Twins for Nuclear Plants,63.54,6
+technical_feasibility,plus20,T05,VR/AR Workforce Training,48.12,9
+technical_feasibility,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.42,7
+technical_feasibility,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.05,12
+technical_feasibility,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),66.2,2
+technical_feasibility,plus20,T09,Medical Isotope Production,49.08,8
+technical_feasibility,plus20,T10,Nuclear Waste Management Technologies,32.59,14
+technical_feasibility,plus20,T11,Decommissioning Technologies,47.54,10
+technical_feasibility,plus20,T12,Small Modular Reactors (SMRs),63.9,4
+technical_feasibility,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.24,11
+technical_feasibility,plus20,T14,Fusion Energy Technologies,33.23,13
+timeline_years_numeric,minus20,T01,AI/ML for Predictive Maintenance,76.92,1
+timeline_years_numeric,minus20,T02,Robotic Nuclear Inspection Systems,62.95,5
+timeline_years_numeric,minus20,T03,Inspection & Survey Drones (UAV/UUV),62.02,6
+timeline_years_numeric,minus20,T04,Digital Twins for Nuclear Plants,63.12,4
+timeline_years_numeric,minus20,T05,VR/AR Workforce Training,45.74,10
+timeline_years_numeric,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.59,7
+timeline_years_numeric,minus20,T07,Smart Materials & Advanced Sensor Coatings,36.66,12
+timeline_years_numeric,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.83,2
+timeline_years_numeric,minus20,T09,Medical Isotope Production,47.69,8
+timeline_years_numeric,minus20,T10,Nuclear Waste Management Technologies,31.29,14
+timeline_years_numeric,minus20,T11,Decommissioning Technologies,46.26,9
+timeline_years_numeric,minus20,T12,Small Modular Reactors (SMRs),63.8,3
+timeline_years_numeric,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.56,11
+timeline_years_numeric,minus20,T14,Fusion Energy Technologies,34.76,13
+timeline_years_numeric,plus20,T01,AI/ML for Predictive Maintenance,77.47,1
+timeline_years_numeric,plus20,T02,Robotic Nuclear Inspection Systems,64.22,3
+timeline_years_numeric,plus20,T03,Inspection & Survey Drones (UAV/UUV),63.32,6
+timeline_years_numeric,plus20,T04,Digital Twins for Nuclear Plants,63.79,5
+timeline_years_numeric,plus20,T05,VR/AR Workforce Training,47.59,10
+timeline_years_numeric,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.43,7
+timeline_years_numeric,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.65,12
+timeline_years_numeric,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.68,2
+timeline_years_numeric,plus20,T09,Medical Isotope Production,49.48,8
+timeline_years_numeric,plus20,T10,Nuclear Waste Management Technologies,31.99,14
+timeline_years_numeric,plus20,T11,Decommissioning Technologies,47.75,9
+timeline_years_numeric,plus20,T12,Small Modular Reactors (SMRs),63.85,4
+timeline_years_numeric,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.19,11
+timeline_years_numeric,plus20,T14,Fusion Energy Technologies,33.57,13
+cost_numeric,minus20,T01,AI/ML for Predictive Maintenance,76.69,1
+cost_numeric,minus20,T02,Robotic Nuclear Inspection Systems,63.89,5
+cost_numeric,minus20,T03,Inspection & Survey Drones (UAV/UUV),61.84,6
+cost_numeric,minus20,T04,Digital Twins for Nuclear Plants,64.31,4
+cost_numeric,minus20,T05,VR/AR Workforce Training,46.04,10
+cost_numeric,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.12,7
+cost_numeric,minus20,T07,Smart Materials & Advanced Sensor Coatings,37.43,12
+cost_numeric,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.04,3
+cost_numeric,minus20,T09,Medical Isotope Production,49.66,8
+cost_numeric,minus20,T10,Nuclear Waste Management Technologies,32.34,14
+cost_numeric,minus20,T11,Decommissioning Technologies,48.05,9
+cost_numeric,minus20,T12,Small Modular Reactors (SMRs),65.24,2
+cost_numeric,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",39.23,11
+cost_numeric,minus20,T14,Fusion Energy Technologies,34.93,13
+cost_numeric,plus20,T01,AI/ML for Predictive Maintenance,77.7,1
+cost_numeric,plus20,T02,Robotic Nuclear Inspection Systems,63.28,4
+cost_numeric,plus20,T03,Inspection & Survey Drones (UAV/UUV),63.5,3
+cost_numeric,plus20,T04,Digital Twins for Nuclear Plants,62.6,5
+cost_numeric,plus20,T05,VR/AR Workforce Training,47.3,9
+cost_numeric,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.9,7
+cost_numeric,plus20,T07,Smart Materials & Advanced Sensor Coatings,36.89,12
+cost_numeric,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.47,2
+cost_numeric,plus20,T09,Medical Isotope Production,47.5,8
+cost_numeric,plus20,T10,Nuclear Waste Management Technologies,30.93,14
+cost_numeric,plus20,T11,Decommissioning Technologies,45.96,10
+cost_numeric,plus20,T12,Small Modular Reactors (SMRs),62.41,6
+cost_numeric,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.52,11
+cost_numeric,plus20,T14,Fusion Energy Technologies,33.41,13
+safety_regulatory_complexity,minus20,T01,AI/ML for Predictive Maintenance,77.25,1
+safety_regulatory_complexity,minus20,T02,Robotic Nuclear Inspection Systems,63.89,4
+safety_regulatory_complexity,minus20,T03,Inspection & Survey Drones (UAV/UUV),62.95,6
+safety_regulatory_complexity,minus20,T04,Digital Twins for Nuclear Plants,63.75,5
+safety_regulatory_complexity,minus20,T05,VR/AR Workforce Training,45.48,10
+safety_regulatory_complexity,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,56.23,7
+safety_regulatory_complexity,minus20,T07,Smart Materials & Advanced Sensor Coatings,37.43,12
+safety_regulatory_complexity,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.59,2
+safety_regulatory_complexity,minus20,T09,Medical Isotope Production,49.66,8
+safety_regulatory_complexity,minus20,T10,Nuclear Waste Management Technologies,32.34,14
+safety_regulatory_complexity,minus20,T11,Decommissioning Technologies,48.05,9
+safety_regulatory_complexity,minus20,T12,Small Modular Reactors (SMRs),65.24,3
+safety_regulatory_complexity,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",39.23,11
+safety_regulatory_complexity,minus20,T14,Fusion Energy Technologies,33.81,13
+safety_regulatory_complexity,plus20,T01,AI/ML for Predictive Maintenance,77.15,1
+safety_regulatory_complexity,plus20,T02,Robotic Nuclear Inspection Systems,63.28,3
+safety_regulatory_complexity,plus20,T03,Inspection & Survey Drones (UAV/UUV),62.39,6
+safety_regulatory_complexity,plus20,T04,Digital Twins for Nuclear Plants,63.16,4
+safety_regulatory_complexity,plus20,T05,VR/AR Workforce Training,47.85,8
+safety_regulatory_complexity,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,53.79,7
+safety_regulatory_complexity,plus20,T07,Smart Materials & Advanced Sensor Coatings,36.89,12
+safety_regulatory_complexity,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.92,2
+safety_regulatory_complexity,plus20,T09,Medical Isotope Production,47.5,9
+safety_regulatory_complexity,plus20,T10,Nuclear Waste Management Technologies,30.93,14
+safety_regulatory_complexity,plus20,T11,Decommissioning Technologies,45.96,10
+safety_regulatory_complexity,plus20,T12,Small Modular Reactors (SMRs),62.41,5
+safety_regulatory_complexity,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.52,11
+safety_regulatory_complexity,plus20,T14,Fusion Energy Technologies,34.52,13
+competitive_intensity,minus20,T01,AI/ML for Predictive Maintenance,78.01,1
+competitive_intensity,minus20,T02,Robotic Nuclear Inspection Systems,63.9,4
+competitive_intensity,minus20,T03,Inspection & Survey Drones (UAV/UUV),62.98,6
+competitive_intensity,minus20,T04,Digital Twins for Nuclear Plants,63.77,5
+competitive_intensity,minus20,T05,VR/AR Workforce Training,46.81,9
+competitive_intensity,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.89,7
+competitive_intensity,minus20,T07,Smart Materials & Advanced Sensor Coatings,36.85,12
+competitive_intensity,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.59,2
+competitive_intensity,minus20,T09,Medical Isotope Production,48.74,8
+competitive_intensity,minus20,T10,Nuclear Waste Management Technologies,30.92,14
+competitive_intensity,minus20,T11,Decommissioning Technologies,46.8,10
+competitive_intensity,minus20,T12,Small Modular Reactors (SMRs),64.5,3
+competitive_intensity,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.43,11
+competitive_intensity,minus20,T14,Fusion Energy Technologies,34.18,13
+competitive_intensity,plus20,T01,AI/ML for Predictive Maintenance,76.39,1
+competitive_intensity,plus20,T02,Robotic Nuclear Inspection Systems,63.26,3
+competitive_intensity,plus20,T03,Inspection & Survey Drones (UAV/UUV),62.36,6
+competitive_intensity,plus20,T04,Digital Twins for Nuclear Plants,63.14,5
+competitive_intensity,plus20,T05,VR/AR Workforce Training,46.53,10
+competitive_intensity,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.13,7
+competitive_intensity,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.47,12
+competitive_intensity,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.92,2
+competitive_intensity,plus20,T09,Medical Isotope Production,48.42,8
+competitive_intensity,plus20,T10,Nuclear Waste Management Technologies,32.36,14
+competitive_intensity,plus20,T11,Decommissioning Technologies,47.21,9
+competitive_intensity,plus20,T12,Small Modular Reactors (SMRs),63.15,4
+competitive_intensity,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.32,11
+competitive_intensity,plus20,T14,Fusion Energy Technologies,34.16,13
+revenue_numeric,minus20,T01,AI/ML for Predictive Maintenance,77.26,1
+revenue_numeric,minus20,T02,Robotic Nuclear Inspection Systems,63.99,3
+revenue_numeric,minus20,T03,Inspection & Survey Drones (UAV/UUV),63.79,5
+revenue_numeric,minus20,T04,Digital Twins for Nuclear Plants,63.86,4
+revenue_numeric,minus20,T05,VR/AR Workforce Training,48.06,8
+revenue_numeric,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.16,7
+revenue_numeric,minus20,T07,Smart Materials & Advanced Sensor Coatings,37.52,11
+revenue_numeric,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.71,2
+revenue_numeric,minus20,T09,Medical Isotope Production,47.05,9
+revenue_numeric,minus20,T10,Nuclear Waste Management Technologies,32.58,14
+revenue_numeric,minus20,T11,Decommissioning Technologies,46.17,10
+revenue_numeric,minus20,T12,Small Modular Reactors (SMRs),62.74,6
+revenue_numeric,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.28,12
+revenue_numeric,minus20,T14,Fusion Energy Technologies,33.69,13
+revenue_numeric,plus20,T01,AI/ML for Predictive Maintenance,77.13,1
+revenue_numeric,plus20,T02,Robotic Nuclear Inspection Systems,63.18,4
+revenue_numeric,plus20,T03,Inspection & Survey Drones (UAV/UUV),61.54,6
+revenue_numeric,plus20,T04,Digital Twins for Nuclear Plants,63.05,5
+revenue_numeric,plus20,T05,VR/AR Workforce Training,45.27,10
+revenue_numeric,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.86,7
+revenue_numeric,plus20,T07,Smart Materials & Advanced Sensor Coatings,36.79,12
+revenue_numeric,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.8,3
+revenue_numeric,plus20,T09,Medical Isotope Production,50.12,8
+revenue_numeric,plus20,T10,Nuclear Waste Management Technologies,30.69,14
+revenue_numeric,plus20,T11,Decommissioning Technologies,47.84,9
+revenue_numeric,plus20,T12,Small Modular Reactors (SMRs),64.91,2
+revenue_numeric,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",39.47,11
+revenue_numeric,plus20,T14,Fusion Energy Technologies,34.64,13
+ip_potential,minus20,T01,AI/ML for Predictive Maintenance,78.54,1
+ip_potential,minus20,T02,Robotic Nuclear Inspection Systems,64.11,3
+ip_potential,minus20,T03,Inspection & Survey Drones (UAV/UUV),63.76,6
+ip_potential,minus20,T04,Digital Twins for Nuclear Plants,63.98,4
+ip_potential,minus20,T05,VR/AR Workforce Training,47.48,10
+ip_potential,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.81,7
+ip_potential,minus20,T07,Smart Materials & Advanced Sensor Coatings,36.64,12
+ip_potential,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.81,2
+ip_potential,minus20,T09,Medical Isotope Production,48.85,8
+ip_potential,minus20,T10,Nuclear Waste Management Technologies,32.19,14
+ip_potential,minus20,T11,Decommissioning Technologies,47.82,9
+ip_potential,minus20,T12,Small Modular Reactors (SMRs),63.78,5
+ip_potential,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.3,11
+ip_potential,minus20,T14,Fusion Energy Technologies,33.02,13
+ip_potential,plus20,T01,AI/ML for Predictive Maintenance,75.86,1
+ip_potential,plus20,T02,Robotic Nuclear Inspection Systems,63.06,4
+ip_potential,plus20,T03,Inspection & Survey Drones (UAV/UUV),61.58,6
+ip_potential,plus20,T04,Digital Twins for Nuclear Plants,62.93,5
+ip_potential,plus20,T05,VR/AR Workforce Training,45.86,10
+ip_potential,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.21,7
+ip_potential,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.67,12
+ip_potential,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.7,2
+ip_potential,plus20,T09,Medical Isotope Production,48.32,8
+ip_potential,plus20,T10,Nuclear Waste Management Technologies,31.09,14
+ip_potential,plus20,T11,Decommissioning Technologies,46.19,9
+ip_potential,plus20,T12,Small Modular Reactors (SMRs),63.87,3
+ip_potential,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",39.45,11
+ip_potential,plus20,T14,Fusion Energy Technologies,35.31,13
+sustainability_impact,minus20,T01,AI/ML for Predictive Maintenance,77.61,1
+sustainability_impact,minus20,T02,Robotic Nuclear Inspection Systems,64.16,3
+sustainability_impact,minus20,T03,Inspection & Survey Drones (UAV/UUV),63.23,6
+sustainability_impact,minus20,T04,Digital Twins for Nuclear Plants,63.66,4
+sustainability_impact,minus20,T05,VR/AR Workforce Training,47.37,9
+sustainability_impact,minus20,T06,Additive Manufacturing (AM) for Nuclear Components,55.09,7
+sustainability_impact,minus20,T07,Smart Materials & Advanced Sensor Coatings,36.96,12
+sustainability_impact,minus20,T08,Advanced Sensor Technologies (Radiation & Structural),65.86,2
+sustainability_impact,minus20,T09,Medical Isotope Production,48.94,8
+sustainability_impact,minus20,T10,Nuclear Waste Management Technologies,30.61,14
+sustainability_impact,minus20,T11,Decommissioning Technologies,46.58,10
+sustainability_impact,minus20,T12,Small Modular Reactors (SMRs),63.66,5
+sustainability_impact,minus20,T13,"Advanced Fission (Generation IV, non-SMR)",37.82,11
+sustainability_impact,minus20,T14,Fusion Energy Technologies,33.18,13
+sustainability_impact,plus20,T01,AI/ML for Predictive Maintenance,76.79,1
+sustainability_impact,plus20,T02,Robotic Nuclear Inspection Systems,63.0,5
+sustainability_impact,plus20,T03,Inspection & Survey Drones (UAV/UUV),62.1,6
+sustainability_impact,plus20,T04,Digital Twins for Nuclear Plants,63.25,4
+sustainability_impact,plus20,T05,VR/AR Workforce Training,45.96,10
+sustainability_impact,plus20,T06,Additive Manufacturing (AM) for Nuclear Components,54.94,7
+sustainability_impact,plus20,T07,Smart Materials & Advanced Sensor Coatings,37.35,12
+sustainability_impact,plus20,T08,Advanced Sensor Technologies (Radiation & Structural),64.65,2
+sustainability_impact,plus20,T09,Medical Isotope Production,48.23,8
+sustainability_impact,plus20,T10,Nuclear Waste Management Technologies,32.67,14
+sustainability_impact,plus20,T11,Decommissioning Technologies,47.43,9
+sustainability_impact,plus20,T12,Small Modular Reactors (SMRs),63.99,3
+sustainability_impact,plus20,T13,"Advanced Fission (Generation IV, non-SMR)",38.92,11
+sustainability_impact,plus20,T14,Fusion Energy Technologies,35.16,13

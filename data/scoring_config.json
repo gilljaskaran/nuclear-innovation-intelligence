@@ -1,0 +1,67 @@
+{
+  "base_weights": {
+    "market_growth_potential": 0.12,
+    "strategic_fit": 0.15,
+    "technical_feasibility": 0.12,
+    "timeline_years_numeric": 0.08,
+    "cost_numeric": 0.1,
+    "safety_regulatory_complexity": 0.1,
+    "competitive_intensity": 0.05,
+    "revenue_numeric": 0.13,
+    "ip_potential": 0.08,
+    "sustainability_impact": 0.07
+  },
+  "criteria_meta": {
+    "market_growth_potential": {
+      "direction": "higher_is_better",
+      "weight": 0.12,
+      "rationale": "Larger addressable growth = larger long-run upside for Kinectrics."
+    },
+    "strategic_fit": {
+      "direction": "higher_is_better",
+      "weight": 0.15,
+      "rationale": "Highest weight: alignment to Kinectrics' own stated focus areas is the single best proxy for organizational buy-in and resourcing likelihood."
+    },
+    "technical_feasibility": {
+      "direction": "higher_is_better",
+      "weight": 0.12,
+      "rationale": "Technologies that are harder to build in principle carry higher execution risk regardless of market appeal."
+    },
+    "timeline_years_numeric": {
+      "direction": "lower_is_better",
+      "weight": 0.08,
+      "rationale": "Faster time-to-value is preferred, especially for a co-op-driven innovation pipeline with quarterly/annual reporting cycles."
+    },
+    "cost_numeric": {
+      "direction": "lower_is_better",
+      "weight": 0.1,
+      "rationale": "Lower implementation cost lowers the bar for a first pilot/proof-of-concept commitment."
+    },
+    "safety_regulatory_complexity": {
+      "direction": "lower_is_better",
+      "weight": 0.1,
+      "rationale": "Regulatory complexity is a direct proxy for time-to-approval and execution risk in a CNSC-regulated environment."
+    },
+    "competitive_intensity": {
+      "direction": "lower_is_better",
+      "weight": 0.05,
+      "rationale": "Lower weight: crowded fields can still be attractive if Kinectrics has a differentiated angle, so this is a minor rather than major penalty."
+    },
+    "revenue_numeric": {
+      "direction": "higher_is_better",
+      "weight": 0.13,
+      "rationale": "Direct proxy for commercial value creation, the core purpose of the Innovation Hub."
+    },
+    "ip_potential": {
+      "direction": "higher_is_better",
+      "weight": 0.08,
+      "rationale": "Defensible IP supports long-term competitive advantage and licensing revenue."
+    },
+    "sustainability_impact": {
+      "direction": "higher_is_better",
+      "weight": 0.07,
+      "rationale": "Reflects Kinectrics' stated culture around sustainability, without overriding commercial criteria."
+    }
+  },
+  "normalization_method": "min-max scaling within dataset (0-100), inverted for lower-is-better criteria"
+}

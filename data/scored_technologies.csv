@@ -1,0 +1,15 @@
+tech_id,technology_name,category,composite_score,rank
+T01,AI/ML for Predictive Maintenance,Digital / Analytics,77.19827586206897,1
+T08,Advanced Sensor Technologies (Radiation & Structural),Materials Science,65.25574712643679,2
+T12,Small Modular Reactors (SMRs),Reactor Technology,63.82471264367816,3
+T02,Robotic Nuclear Inspection Systems,Robotics / Inspection,63.58333333333333,4
+T04,Digital Twins for Nuclear Plants,Digital / Analytics,63.45402298850574,5
+T03,Inspection & Survey Drones (UAV/UUV),Robotics / Inspection,62.666666666666664,6
+T06,Additive Manufacturing (AM) for Nuclear Components,Advanced Manufacturing,55.01149425287357,7
+T09,Medical Isotope Production,Medical / Isotopes,48.583333333333336,8
+T11,Decommissioning Technologies,Waste & Decommissioning,47.00574712643678,9
+T05,VR/AR Workforce Training,Digital / Analytics,46.666666666666664,10
+T13,"Advanced Fission (Generation IV, non-SMR)",Reactor Technology,38.37356321839081,11
+T07,Smart Materials & Advanced Sensor Coatings,Materials Science,37.1580459770115,12
+T14,Fusion Energy Technologies,Reactor Technology,34.16666666666667,13
+T10,Nuclear Waste Management Technologies,Waste & Decommissioning,31.637931034482758,14
