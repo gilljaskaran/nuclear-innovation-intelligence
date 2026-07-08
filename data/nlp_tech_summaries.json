@@ -1,0 +1,84 @@
+{
+  "T01": {
+    "category": "AI/ML Predictive Maintenance",
+    "n_sources": 4,
+    "sources": [
+      "- Explainable machine-learning tools for predictive maintenance of circulating water systems in nuclear power plants (ScienceDirect / Nuclear Engineering and Technology) \u2014 https://www.sciencedirect.com/science/article/pii/S1738573325001561",
+      "- Explainable machine-learning tools for predictive maintenance of circulating water systems in nuclear power plants (OSTI.GOV (DOE)) \u2014 https://www.osti.gov/pages/biblio/2567518",
+      "- Nuclear Predictive Maintenance: AI & Machine Learning for Reactor Equipment (Oxmaint) \u2014 https://oxmaint.com/industries/power-plant/nuclear-predictive-maintenance-ai-ml-reactor-equipment",
+      "- The use of Artificial Intelligence in the nuclear sector (Foro Nuclear) \u2014 https://www.foronuclear.org/en/updates/in-depth/the-use-of-artificial-intelligence-in-the-nuclear-sector/"
+    ]
+  },
+  "T02": {
+    "category": "Robotic Inspection",
+    "n_sources": 4,
+    "sources": [
+      "- A novel inspection robot for nuclear station steam generator secondary side with self-localization (Robotics and Biomimetics (Springer)) \u2014 https://jrobio.springeropen.com/articles/10.1186/s40638-017-0078-y",
+      "- The SG-Climbot: An Adaptable, Efficient, Inspection and Repair Robot for Steam Generator Heat Transfer Tube Sheet (Journal of Field Robotics (Wiley)) \u2014 https://onlinelibrary.wiley.com/doi/10.1002/rob.22436",
+      "- An Inspection Planning Method for Steam Generators with Triangular-Distributed Tubes (Springer Nature) \u2014 https://link.springer.com/chapter/10.1007/978-3-031-13835-5_52",
+      "- High-efficiency inspecting method for mobile robots based on task planning for heat transfer tubes in a steam generator (Frontiers of Mechanical Engineering (Springer)) \u2014 https://link.springer.com/article/10.1007/s11465-022-0741-z"
+    ]
+  },
+  "T04": {
+    "category": "Digital Twins",
+    "n_sources": 5,
+    "sources": [
+      "- A nuclear power plant digital twin for developing robot navigation and interaction (Frontiers in Energy Research) \u2014 https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2024.1356624/full",
+      "- iFANnpp: Nuclear Power Plant Digital Twin for Robots and Autonomous Intelligence (arXiv) \u2014 https://arxiv.org/pdf/2410.09213",
+      "- Digital Twins for Nuclear Power Plants and Facilities (Oak Ridge National Laboratory (ORNL)) \u2014 https://www.ornl.gov/publication/digital-twins-nuclear-power-plants-and-facilities",
+      "- Digital Twin-Centered Hybrid Data-Driven Multi-Stage Deep Learning Framework for Enhanced Nuclear Reactor Power Prediction (arXiv) \u2014 https://arxiv.org/pdf/2211.13157",
+      "- Digital Twins | Nuclear Regulatory Commission (U.S. NRC) \u2014 https://www.nrc.gov/reactors/power/digital-twins"
+    ]
+  },
+  "T06": {
+    "category": "Additive Manufacturing",
+    "n_sources": 4,
+    "sources": [
+      "- Qualification pathways for additively manufactured components for nuclear applications (ScienceDirect / Journal of Nuclear Materials) \u2014 https://www.sciencedirect.com/science/article/abs/pii/S0022311521000696",
+      "- NUCOBAM European project: NUclear COmponents based on additive manufacturing (EPJ Nuclear Sciences & Technologies) \u2014 https://www.epj-n.org/articles/epjn/full_html/2025/01/epjn20250025/epjn20250025.html",
+      "- Embracing the Promise of Additive Manufacturing for Advanced Nuclear Reactors (IAEA Bulletin) \u2014 https://www.iaea.org/bulletin/embracing-the-promise-of-additive-manufacturing-for-advanced-nuclear-reactors",
+      "- Advanced Manufacturing and Materials Qualification for Nuclear Reactors (EPRI) \u2014 https://ant.epri.com/research/advanced-manufacturing-materials-qualification"
+    ]
+  },
+  "T09": {
+    "category": "Medical Isotopes",
+    "n_sources": 5,
+    "sources": [
+      "- Lutetium-177, The Increasing Production Of A Promising Radioisotope (European Nuclear Society (Euronuclear)) \u2014 https://www.euronuclear.org/news/lutetium-177-radioisotope-production/",
+      "- Multiple Production Methods Underway to Provide Actinium-225 (National Isotope Development Center (US DOE)) \u2014 https://www.isotopes.gov/information/actinium-225",
+      "- Challenges and future options for the production of lutetium-177 (European Journal of Nuclear Medicine and Molecular Imaging (Springer)) \u2014 https://link.springer.com/article/10.1007/s00259-021-05392-2",
+      "- Radiopharma Sector Races To Secure Actinium-225 Supply as Pipelines Expand (BioSpace) \u2014 https://www.biospace.com/business/radiopharma-sector-races-to-secure-actinium-225-supply-as-pipelines-expand",
+      "- Securing medical radioisotopes supply: NEA hosts second international workshop (OECD Nuclear Energy Agency) \u2014 https://www.oecd-nea.org/jcms/pl_98146/securing-medical-radioisotopes-supply-nea-hosts-second-international-workshop"
+    ]
+  },
+  "T10": {
+    "category": "Waste Management",
+    "n_sources": 4,
+    "sources": [
+      "- Deep Geologic Repositories (Canadian Nuclear Safety Commission (CNSC)) \u2014 https://www.cnsc-ccsn.gc.ca/eng/resources/educational-resources/feature-articles/deep-geological-repositories-DGR/",
+      "- Deep geologic repository progress \u2014 2025 Update (American Nuclear Society / Nuclear Newswire) \u2014 https://www.ans.org/news/2025-07-25/article-7222/deep-geologic-repository-progress2025-update/",
+      "- Deep geological repositories \u2014 A review of design concepts, near-field evolution, and their implications for nuclear waste containment (ScienceDirect) \u2014 https://www.sciencedirect.com/science/article/pii/S0265931X25001377",
+      "- Next-generation nuclear waste management: Geological repositories, emerging technologies, and global pathways (ScienceDirect) \u2014 https://www.sciencedirect.com/science/article/pii/S2772416626000410"
+    ]
+  },
+  "T12": {
+    "category": "SMR",
+    "n_sources": 4,
+    "sources": [
+      "- There are now 127 different SMR designs, finds NEA report (World Nuclear News) \u2014 https://www.world-nuclear-news.org/articles/there-are-now-127-different-smr-designs-finds-nea-report",
+      "- The NEA Small Modular Reactor Dashboard: Third Edition (OECD Nuclear Energy Agency) \u2014 https://www.oecd-nea.org/jcms/pl_108326/the-nea-small-modular-reactor-dashboard-third-edition",
+      "- Deployment of small modular reactors: A strategic roadmap validated by expert consensus (ScienceDirect) \u2014 https://www.sciencedirect.com/science/article/pii/S2211467X26001938",
+      "- Small Modular Reactors: A Realist Approach to the Future of Nuclear Power (Information Technology and Innovation Foundation (ITIF)) \u2014 https://itif.org/publications/2025/04/14/small-modular-reactors-a-realist-approach-to-the-future-of-nuclear-power/"
+    ]
+  },
+  "T14": {
+    "category": "Fusion",
+    "n_sources": 4,
+    "sources": [
+      "- Fusion Energy: No Longer '30 Years Away'? (IDTechEx) \u2014 https://www.idtechex.com/en/research-article/fusion-energy-no-longer-30-years-away/33122",
+      "- Energy Department Announces Fusion Science and Technology Roadmap to Accelerate Commercial Fusion Power (U.S. Department of Energy) \u2014 https://www.energy.gov/articles/energy-department-announces-fusion-science-and-technology-roadmap-accelerate-commercial",
+      "- Toward Commercial Fusion Energy: Considerations for Congress (Congressional Research Service) \u2014 https://www.congress.gov/crs-product/R48866",
+      "- Fusion energy commercialization requires solving social and environmental challenges (arXiv) \u2014 https://arxiv.org/pdf/2403.05993"
+    ]
+  }
+}

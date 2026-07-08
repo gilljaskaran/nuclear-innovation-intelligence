@@ -1,0 +1,81 @@
+"""
+build_corpus.py
+Builds data/research_corpus.csv — a small, REAL, source-linked corpus of
+public research/industry documents used by the NLP component
+(topic_modeling.py).
+
+HONESTY NOTE ON METHOD (read this before presenting the project):
+The original design called for a bulk pull from the OpenAlex API (250M+
+open scholarly records, no API key required — see source_register.csv).
+That API, and arXiv's export API, were not reachable from this project's
+sandboxed research environment (outbound requests to those hosts were
+blocked by the environment's network allowlist). Rather than fabricate a
+larger corpus, this file hand-assembles a smaller, real, verifiable set of
+~35 documents gathered via live web search on 2026-07-17 — every title,
+publisher, and URL below is a real, checkable document, not a placeholder.
+`topic_modeling.py` is written against a generic `title,url,snippet,category`
+CSV, so pointing it at a full OpenAlex/arXiv bulk export (the
+`openalex_pull_template.py` script in this same folder shows exactly how)
+is a drop-in replacement with no logic changes, if run somewhere with open
+network access.
+"""
+import pandas as pd
+
+# Each row: (tech_id, category, title, publisher, url, snippet)
+CORPUS = [
+    # --- AI/ML for Predictive Maintenance (T01) ---
+    ("T01", "AI/ML Predictive Maintenance", "Explainable machine-learning tools for predictive maintenance of circulating water systems in nuclear power plants", "ScienceDirect / Nuclear Engineering and Technology", "https://www.sciencedirect.com/science/article/pii/S1738573325001561", "Explainable ML tools applied to predictive maintenance of circulating water systems in nuclear power plants, addressing the explainability gap that limits adoption."),
+    ("T01", "AI/ML Predictive Maintenance", "Explainable machine-learning tools for predictive maintenance of circulating water systems in nuclear power plants", "OSTI.GOV (DOE)", "https://www.osti.gov/pages/biblio/2567518", "DOE OSTI record of the same explainable-ML predictive maintenance study, indexed as a journal article."),
+    ("T01", "AI/ML Predictive Maintenance", "Nuclear Predictive Maintenance: AI & Machine Learning for Reactor Equipment", "Oxmaint", "https://oxmaint.com/industries/power-plant/nuclear-predictive-maintenance-ai-ml-reactor-equipment", "Industry overview of AI/ML techniques (CNNs, RNNs, reinforcement learning) applied to equipment health prediction and failure-mode classification in nuclear plants."),
+    ("T01", "AI/ML Predictive Maintenance", "The use of Artificial Intelligence in the nuclear sector", "Foro Nuclear", "https://www.foronuclear.org/en/updates/in-depth/the-use-of-artificial-intelligence-in-the-nuclear-sector/", "Sector overview noting AI adoption for predictive maintenance is still early-stage but shows strong cost-saving potential."),
+
+    # --- Robotic Nuclear Inspection Systems (T02) ---
+    ("T02", "Robotic Inspection", "A novel inspection robot for nuclear station steam generator secondary side with self-localization", "Robotics and Biomimetics (Springer)", "https://jrobio.springeropen.com/articles/10.1186/s40638-017-0078-y", "Climbing robot with onboard cameras and self-localization for inspecting steam generator secondary-side tubes without direct human access."),
+    ("T02", "Robotic Inspection", "The SG-Climbot: An Adaptable, Efficient, Inspection and Repair Robot for Steam Generator Heat Transfer Tube Sheet", "Journal of Field Robotics (Wiley)", "https://onlinelibrary.wiley.com/doi/10.1002/rob.22436", "2025 paper on an adaptable robot for inspecting and repairing steam generator heat-transfer tube sheets."),
+    ("T02", "Robotic Inspection", "An Inspection Planning Method for Steam Generators with Triangular-Distributed Tubes", "Springer Nature", "https://link.springer.com/chapter/10.1007/978-3-031-13835-5_52", "Task- and path-planning method for robots inspecting the thousands of tubes inside a steam generator."),
+    ("T02", "Robotic Inspection", "High-efficiency inspecting method for mobile robots based on task planning for heat transfer tubes in a steam generator", "Frontiers of Mechanical Engineering (Springer)", "https://link.springer.com/article/10.1007/s11465-022-0741-z", "Task-planning approach to improve efficiency of mobile robot inspection of steam generator heat-transfer tubes."),
+
+    # --- Digital Twins for Nuclear Plants (T04) ---
+    ("T04", "Digital Twins", "A nuclear power plant digital twin for developing robot navigation and interaction", "Frontiers in Energy Research", "https://www.frontiersin.org/journals/energy-research/articles/10.3389/fenrg.2024.1356624/full", "Simulation-based digital twin environment built specifically to develop and test robot navigation/interaction in nuclear plants, since testing on physical plants is restricted for safety reasons."),
+    ("T04", "Digital Twins", "iFANnpp: Nuclear Power Plant Digital Twin for Robots and Autonomous Intelligence", "arXiv", "https://arxiv.org/pdf/2410.09213", "Open digital-twin framework for nuclear power plants aimed at supporting robotics and autonomous-intelligence research."),
+    ("T04", "Digital Twins", "Digital Twins for Nuclear Power Plants and Facilities", "Oak Ridge National Laboratory (ORNL)", "https://www.ornl.gov/publication/digital-twins-nuclear-power-plants-and-facilities", "ORNL publication on digital twin applications across the nuclear plant lifecycle: design, licensing, operations, maintenance, and decommissioning."),
+    ("T04", "Digital Twins", "Digital Twin-Centered Hybrid Data-Driven Multi-Stage Deep Learning Framework for Enhanced Nuclear Reactor Power Prediction", "arXiv", "https://arxiv.org/pdf/2211.13157", "Deep-learning framework combining physics models and data-driven methods for nuclear reactor power prediction within a digital-twin architecture."),
+    ("T04", "Digital Twins", "Digital Twins | Nuclear Regulatory Commission", "U.S. NRC", "https://www.nrc.gov/reactors/power/digital-twins", "U.S. regulator's own page on digital twins, noting a research partnership with Idaho National Laboratory and Oak Ridge National Laboratory to assess regulatory viability."),
+
+    # --- Additive Manufacturing (T06) ---
+    ("T06", "Additive Manufacturing", "Qualification pathways for additively manufactured components for nuclear applications", "ScienceDirect / Journal of Nuclear Materials", "https://www.sciencedirect.com/science/article/abs/pii/S0022311521000696", "Evaluates qualification pathways for 316L stainless steel components made by laser powder bed fusion, including hot isostatic pressing (HIP) treatment to reduce property scatter."),
+    ("T06", "Additive Manufacturing", "NUCOBAM European project: NUclear COmponents based on additive manufacturing", "EPJ Nuclear Sciences & Technologies", "https://www.epj-n.org/articles/epjn/full_html/2025/01/epjn20250025/epjn20250025.html", "13-organization, 6-country European project developing qualification/evaluation processes for 3D-printed nuclear power plant components."),
+    ("T06", "Additive Manufacturing", "Embracing the Promise of Additive Manufacturing for Advanced Nuclear Reactors", "IAEA Bulletin", "https://www.iaea.org/bulletin/embracing-the-promise-of-additive-manufacturing-for-advanced-nuclear-reactors", "IAEA overview of additive manufacturing's potential for advanced reactor components and the qualification challenges still to be solved."),
+    ("T06", "Additive Manufacturing", "Advanced Manufacturing and Materials Qualification for Nuclear Reactors", "EPRI", "https://ant.epri.com/research/advanced-manufacturing-materials-qualification", "EPRI research program on advanced manufacturing and materials qualification, including additive manufacturing, for the nuclear fleet."),
+
+    # --- Small Modular Reactors (T12) ---
+    ("T12", "SMR", "There are now 127 different SMR designs, finds NEA report", "World Nuclear News", "https://www.world-nuclear-news.org/articles/there-are-now-127-different-smr-designs-finds-nea-report", "Coverage of the OECD NEA's SMR Dashboard third edition, reporting 127 tracked SMR designs globally and 74 analyzed in depth."),
+    ("T12", "SMR", "The NEA Small Modular Reactor Dashboard: Third Edition", "OECD Nuclear Energy Agency", "https://www.oecd-nea.org/jcms/pl_108326/the-nea-small-modular-reactor-dashboard-third-edition", "Official NEA dashboard report: 51 SMR designs in pre-licensing/licensing, 85 active siting discussions, data as of Feb 2025."),
+    ("T12", "SMR", "Deployment of small modular reactors: A strategic roadmap validated by expert consensus", "ScienceDirect", "https://www.sciencedirect.com/science/article/pii/S2211467X26001938", "Expert-consensus roadmap for SMR deployment strategy, covering technical, regulatory, and market factors."),
+    ("T12", "SMR", "Small Modular Reactors: A Realist Approach to the Future of Nuclear Power", "Information Technology and Innovation Foundation (ITIF)", "https://itif.org/publications/2025/04/14/small-modular-reactors-a-realist-approach-to-the-future-of-nuclear-power/", "Policy report assessing realistic timelines, cost trajectories, and deployment barriers for SMRs."),
+
+    # --- Nuclear Waste Management (T10) ---
+    ("T10", "Waste Management", "Deep Geologic Repositories", "Canadian Nuclear Safety Commission (CNSC)", "https://www.cnsc-ccsn.gc.ca/eng/resources/educational-resources/feature-articles/deep-geological-repositories-DGR/", "Canadian regulator's educational overview of deep geological repository concepts and Canada's program."),
+    ("T10", "Waste Management", "Deep geologic repository progress — 2025 Update", "American Nuclear Society / Nuclear Newswire", "https://www.ans.org/news/2025-07-25/article-7222/deep-geologic-repository-progress2025-update/", "2025 industry update on global deep geological repository program progress, including Canada's site-selection milestone."),
+    ("T10", "Waste Management", "Deep geological repositories — A review of design concepts, near-field evolution, and their implications for nuclear waste containment", "ScienceDirect", "https://www.sciencedirect.com/science/article/pii/S0265931X25001377", "Technical review of repository design concepts and near-field barrier evolution (e.g., bentonite, canister corrosion) relevant to long-term containment performance."),
+    ("T10", "Waste Management", "Next-generation nuclear waste management: Geological repositories, emerging technologies, and global pathways", "ScienceDirect", "https://www.sciencedirect.com/science/article/pii/S2772416626000410", "Survey of emerging waste-management technologies and global deployment pathways beyond first-generation repository designs."),
+
+    # --- Fusion Energy (T14) ---
+    ("T14", "Fusion", "Fusion Energy: No Longer '30 Years Away'?", "IDTechEx", "https://www.idtechex.com/en/research-article/fusion-energy-no-longer-30-years-away/33122", "Market-research overview citing roughly 50 private fusion companies and multi-billion-dollar private investment advancing burning-plasma demonstrations."),
+    ("T14", "Fusion", "Energy Department Announces Fusion Science and Technology Roadmap to Accelerate Commercial Fusion Power", "U.S. Department of Energy", "https://www.energy.gov/articles/energy-department-announces-fusion-science-and-technology-roadmap-accelerate-commercial", "DOE roadmap targeting commercial fusion power delivery to the grid by the mid-2030s."),
+    ("T14", "Fusion", "Toward Commercial Fusion Energy: Considerations for Congress", "Congressional Research Service", "https://www.congress.gov/crs-product/R48866", "US policy-focused overview of technical and regulatory considerations for commercial fusion energy."),
+    ("T14", "Fusion", "Fusion energy commercialization requires solving social and environmental challenges", "arXiv", "https://arxiv.org/pdf/2403.05993", "Academic paper arguing that social and environmental challenges, not just plasma physics, will determine fusion's commercialization timeline."),
+
+    # --- Medical Isotope Production (T09) ---
+    ("T09", "Medical Isotopes", "Lutetium-177, The Increasing Production Of A Promising Radioisotope", "European Nuclear Society (Euronuclear)", "https://www.euronuclear.org/news/lutetium-177-radioisotope-production/", "Overview of growing global Lu-177 production capacity for cancer-therapy radiopharmaceuticals."),
+    ("T09", "Medical Isotopes", "Multiple Production Methods Underway to Provide Actinium-225", "National Isotope Development Center (US DOE)", "https://www.isotopes.gov/information/actinium-225", "US federal overview of multiple parallel production routes (including the DOE Tri-Lab accelerator effort) being pursued to scale up Ac-225 supply."),
+    ("T09", "Medical Isotopes", "Challenges and future options for the production of lutetium-177", "European Journal of Nuclear Medicine and Molecular Imaging (Springer)", "https://link.springer.com/article/10.1007/s00259-021-05392-2", "Peer-reviewed review of reactor-based Lu-177 production routes and future supply options."),
+    ("T09", "Medical Isotopes", "Radiopharma Sector Races To Secure Actinium-225 Supply as Pipelines Expand", "BioSpace", "https://www.biospace.com/business/radiopharma-sector-races-to-secure-actinium-225-supply-as-pipelines-expand", "Industry reporting on the Ac-225 supply race, including the ITM/Canadian Nuclear Laboratories 'Actineer' joint venture."),
+    ("T09", "Medical Isotopes", "Securing medical radioisotopes supply: NEA hosts second international workshop", "OECD Nuclear Energy Agency", "https://www.oecd-nea.org/jcms/pl_98146/securing-medical-radioisotopes-supply-nea-hosts-second-international-workshop", "NEA workshop coverage on international efforts to secure and monitor medical radioisotope supply chains."),
+]
+
+df = pd.DataFrame(CORPUS, columns=["tech_id", "category", "title", "publisher", "url", "snippet"])
+df.insert(0, "doc_id", ["D" + str(i+1).zfill(3) for i in range(len(df))])
+df.to_csv("data/research_corpus.csv", index=False)
+print(f"Wrote data/research_corpus.csv with {len(df)} real, source-linked documents across {df.category.nunique()} categories.")
+print(df.groupby("category").size())
