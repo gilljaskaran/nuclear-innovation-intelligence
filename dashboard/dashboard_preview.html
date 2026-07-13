@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nuclear & Clean-Energy Innovation Opportunity Intelligence — Dashboard Preview</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1720; --panel: #17212b; --panel2: #1e2b38; --text: #e8edf2; --muted: #9fb0c0;
+    --accent: #4fc3f7; --accent2: #81c995; --warn: #f4a261; --danger: #e76f51; --border: #2b3947;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 20px 28px; border-bottom: 1px solid var(--border); }
+  header h1 { margin:0 0 4px 0; font-size: 20px; }
+  header p { margin:0; color: var(--muted); font-size: 13px; }
+  nav { display:flex; gap:6px; padding: 0 28px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  nav button { background:none; border:none; color: var(--muted); padding: 12px 14px; cursor:pointer; font-size: 13px; border-bottom: 2px solid transparent; }
+  nav button.active { color: var(--text); border-bottom: 2px solid var(--accent); }
+  main { padding: 22px 28px 60px; max-width: 1400px; margin: 0 auto; }
+  .page { display:none; }
+  .page.active { display:block; }
+  .kpis { display:flex; gap:14px; flex-wrap:wrap; margin-bottom: 20px; }
+  .kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; min-width: 160px; }
+  .kpi .val { font-size: 26px; font-weight: 700; color: var(--accent); }
+  .kpi .lbl { font-size: 12px; color: var(--muted); margin-top:4px; }
+  .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin-bottom: 18px; }
+  .panel h3 { margin:0 0 10px 0; font-size: 14px; color: var(--muted); font-weight:600; text-transform: uppercase; letter-spacing: .04em; }
+  canvas { max-height: 420px; }
+  table { width:100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align:left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; cursor:pointer; }
+  tr:hover td { background: var(--panel2); }
+  .badge { display:inline-block; padding:2px 8px; border-radius: 999px; font-size: 11px; font-weight:600; }
+  .b-verified { background: rgba(129,201,149,.18); color: var(--accent2); }
+  .b-estimated { background: rgba(79,195,247,.18); color: var(--accent); }
+  .b-assumption { background: rgba(244,162,97,.18); color: var(--warn); }
+  .filters { display:flex; gap:10px; margin-bottom: 16px; flex-wrap: wrap; }
+  select, input[type=range] { background: var(--panel2); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; }
+  .risk-cell { text-align:center; font-weight:700; border-radius: 4px; }
+  .profile { display:none; }
+  .profile.active { display:block; }
+  .close-btn { float:right; background:var(--panel2); border:1px solid var(--border); color:var(--text); padding:4px 10px; border-radius:6px; cursor:pointer; }
+  .tag { display:inline-block; background: var(--panel2); border:1px solid var(--border); border-radius: 6px; padding: 6px 10px; margin: 4px 6px 0 0; font-size:12px; color: var(--muted); }
+  footer { padding: 18px 28px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Nuclear & Clean-Energy Innovation Opportunity Intelligence Platform</h1>
+  <p>Interactive HTML preview of the Power BI dashboard build (see <code>powerbi_build_guide.md</code>) &mdash; live-filters the same underlying scored dataset.</p>
+</header>
+<nav id="nav"></nav>
+<main>
+  <div id="page-overview" class="page"></div>
+  <div id="page-portfolio" class="page"></div>
+  <div id="page-matrix" class="page"></div>
+  <div id="page-cost" class="page"></div>
+  <div id="page-risk" class="page"></div>
+  <div id="page-profile" class="page"></div>
+</main>
+<footer>
+  Data confidence: <span class="badge b-verified">VERIFIED</span> = named public source &nbsp;
+  <span class="badge b-estimated">ESTIMATED</span> = author judgment informed by public sources &nbsp;
+  <span class="badge b-assumption">ASSUMPTION</span> = working assumption, weak/no public evidence.
+  Scoring is relative ranking within this 14-technology set, not an absolute investment-grade score. See <code>data/data_dictionary.md</code> and the technical white paper for full methodology and limitations.
+</footer>
+<script>
+const DATA = {"technologies": [{"tech_id": "T01", "technology_name": "AI/ML for Predictive Maintenance", "category": "Digital / Analytics", "problem_addressed": "Unplanned outages and reactive maintenance on nuclear plant equipment drive cost and safety risk; condition-based monitoring aims to predict component failure before it happens.", "trl": 7, "market_growth_potential": 5, "strategic_fit": 5, "commercialization_timeline_years": "1-2", "cost_tier": "Low", "safety_regulatory_complexity": 2, "technical_feasibility": 5, "competitive_intensity": 4, "revenue_impact_tier": "Medium-High", "ip_potential": 2, "sustainability_impact": 3, "partnership_opportunities": "EPRI, utility operators, university ML labs (e.g., UOIT/Ontario Tech nuclear engineering programs).", "evidence_source": "IAEA Nuclear Technology Review 2025 (AI in nuclear power/fuel cycle section)", "confidence": "ESTIMATED", "composite_score": 77.19827586206897, "rank": 1, "cost_numeric": 1, "revenue_numeric": 4, "timeline_years_numeric": 1.5}, {"tech_id": "T08", "technology_name": "Advanced Sensor Technologies (Radiation & Structural)", "category": "Materials Science", "problem_addressed": "Existing radiation and structural-health sensors have limits on precision, durability in high-radiation fields, or real-time data output.", "trl": 6, "market_growth_potential": 4, "strategic_fit": 5, "commercialization_timeline_years": "1-3", "cost_tier": "Low-Medium", "safety_regulatory_complexity": 3, "technical_feasibility": 5, "competitive_intensity": 3, "revenue_impact_tier": "Medium", "ip_potential": 3, "sustainability_impact": 2, "partnership_opportunities": "Instrumentation vendors, university engineering-physics departments.", "evidence_source": "Kinectrics public job posting focus-area list; general nuclear instrumentation industry knowledge", "confidence": "ESTIMATED", "composite_score": 65.25574712643679, "rank": 2, "cost_numeric": 2, "revenue_numeric": 3, "timeline_years_numeric": 2.0}, {"tech_id": "T12", "technology_name": "Small Modular Reactors (SMRs)", "category": "Reactor Technology", "problem_addressed": "Need for lower-capital, faster-to-build, more flexible nuclear generation than large conventional reactors, including for remote/off-grid and industrial-heat applications.", "trl": 6, "market_growth_potential": 5, "strategic_fit": 5, "commercialization_timeline_years": "2-5 (first units), 5-10 (fleet scale)", "cost_tier": "High", "safety_regulatory_complexity": 5, "technical_feasibility": 4, "competitive_intensity": 4, "revenue_impact_tier": "High", "ip_potential": 4, "sustainability_impact": 4, "partnership_opportunities": "Ontario Power Generation, GE Hitachi, CNSC, CNL.", "evidence_source": "OECD NEA Small Modular Reactor Dashboard, 3rd Edition (2025); public reporting on OPG's Darlington New Nuclear Project", "confidence": "VERIFIED", "composite_score": 63.82471264367816, "rank": 3, "cost_numeric": 5, "revenue_numeric": 5, "timeline_years_numeric": 5.5}, {"tech_id": "T02", "technology_name": "Robotic Nuclear Inspection Systems", "category": "Robotics / Inspection", "problem_addressed": "In-service inspection of reactor components, steam generators, and high-radiation areas is dangerous and time-consuming for human workers.", "trl": 8, "market_growth_potential": 4, "strategic_fit": 5, "commercialization_timeline_years": "0-1 (mature)", "cost_tier": "Medium", "safety_regulatory_complexity": 3, "technical_feasibility": 5, "competitive_intensity": 3, "revenue_impact_tier": "Medium", "ip_potential": 3, "sustainability_impact": 2, "partnership_opportunities": "NDE/inspection vendors, CNSC (qualification pathway), Canadian Nuclear Laboratories (CNL).", "evidence_source": "Kinectrics public job posting focus-area list; general robotics-in-nuclear industry literature", "confidence": "ESTIMATED", "composite_score": 63.58333333333333, "rank": 4, "cost_numeric": 3, "revenue_numeric": 3, "timeline_years_numeric": 0.5}, {"tech_id": "T04", "technology_name": "Digital Twins for Nuclear Plants", "category": "Digital / Analytics", "problem_addressed": "Plant operators lack a continuously-updated virtual model that mirrors real asset condition for simulation, training, and life-extension planning.", "trl": 6, "market_growth_potential": 5, "strategic_fit": 5, "commercialization_timeline_years": "2-4", "cost_tier": "Medium-High", "safety_regulatory_complexity": 3, "technical_feasibility": 4, "competitive_intensity": 3, "revenue_impact_tier": "Medium", "ip_potential": 3, "sustainability_impact": 3, "partnership_opportunities": "Digital-twin platform vendors, university simulation labs, CNL.", "evidence_source": "IAEA Nuclear Technology Review 2025 (AI/digital tools section)", "confidence": "ESTIMATED", "composite_score": 63.45402298850574, "rank": 5, "cost_numeric": 4, "revenue_numeric": 3, "timeline_years_numeric": 3.0}, {"tech_id": "T03", "technology_name": "Inspection & Survey Drones (UAV/UUV)", "category": "Robotics / Inspection", "problem_addressed": "Visual and radiological survey of tall structures (stacks, cooling towers), spent-fuel pools, and post-accident sites is hazardous or inaccessible for humans.", "trl": 8, "market_growth_potential": 4, "strategic_fit": 5, "commercialization_timeline_years": "0-1 (mature)", "cost_tier": "Low", "safety_regulatory_complexity": 3, "technical_feasibility": 5, "competitive_intensity": 3, "revenue_impact_tier": "Low-Medium", "ip_potential": 2, "sustainability_impact": 2, "partnership_opportunities": "Commercial drone-services firms, Transport Canada (airspace approvals), site operators.", "evidence_source": "Public reporting on Fukushima Daiichi drone/robot survey programs (IAEA and international media coverage)", "confidence": "ESTIMATED", "composite_score": 62.66666666666666, "rank": 6, "cost_numeric": 1, "revenue_numeric": 2, "timeline_years_numeric": 0.5}, {"tech_id": "T06", "technology_name": "Additive Manufacturing (AM) for Nuclear Components", "category": "Advanced Manufacturing", "problem_addressed": "Long lead times and obsolescence risk for spare parts, especially for aging CANDU-fleet components no longer in standard production.", "trl": 6, "market_growth_potential": 4, "strategic_fit": 5, "commercialization_timeline_years": "2-5", "cost_tier": "Medium", "safety_regulatory_complexity": 5, "technical_feasibility": 3, "competitive_intensity": 2, "revenue_impact_tier": "Medium", "ip_potential": 4, "sustainability_impact": 3, "partnership_opportunities": "Materials-science university labs, CNL, AM equipment vendors.", "evidence_source": "IAEA Nuclear Technology Review 2025 (fuel cycle / manufacturing innovation sections); general public reporting on AM pilot use in commercial reactors", "confidence": "ESTIMATED", "composite_score": 55.01149425287357, "rank": 7, "cost_numeric": 3, "revenue_numeric": 3, "timeline_years_numeric": 3.5}, {"tech_id": "T09", "technology_name": "Medical Isotope Production", "category": "Medical / Isotopes", "problem_addressed": "Global supply reliability for medical isotopes (e.g., Mo-99/Tc-99m generators, Lu-177) used in diagnostics and cancer therapy, especially after past reactor-supply disruptions.", "trl": 9, "market_growth_potential": 4, "strategic_fit": 4, "commercialization_timeline_years": "0-1 (mature, with newer isotopes at earlier stage)", "cost_tier": "High", "safety_regulatory_complexity": 5, "technical_feasibility": 4, "competitive_intensity": 3, "revenue_impact_tier": "High", "ip_potential": 3, "sustainability_impact": 2, "partnership_opportunities": "Canadian Nuclear Laboratories, hospital/oncology networks, Health Canada.", "evidence_source": "Public historical record of Canada's NRU reactor medical-isotope role; general nuclear-medicine industry reporting", "confidence": "ESTIMATED", "composite_score": 48.583333333333336, "rank": 8, "cost_numeric": 5, "revenue_numeric": 5, "timeline_years_numeric": 0.5}, {"tech_id": "T11", "technology_name": "Decommissioning Technologies", "category": "Waste & Decommissioning", "problem_addressed": "Safe, cost-effective dismantling and site restoration of retired reactors and nuclear facilities, including remote segmentation of activated components.", "trl": 7, "market_growth_potential": 4, "strategic_fit": 4, "commercialization_timeline_years": "1-3", "cost_tier": "High", "safety_regulatory_complexity": 5, "technical_feasibility": 4, "competitive_intensity": 2, "revenue_impact_tier": "Medium-High", "ip_potential": 2, "sustainability_impact": 4, "partnership_opportunities": "Canadian Nuclear Laboratories, decommissioning contractors, CNSC.", "evidence_source": "CNSC public regulatory oversight reports on decommissioning sites; general industry knowledge of the global decommissioning wave", "confidence": "ESTIMATED", "composite_score": 47.00574712643678, "rank": 9, "cost_numeric": 5, "revenue_numeric": 4, "timeline_years_numeric": 2.0}, {"tech_id": "T05", "technology_name": "VR/AR Workforce Training", "category": "Digital / Analytics", "problem_addressed": "Hands-on training in live radiological environments is limited by dose constraints and outage scheduling; skilled-worker pipeline is also a known industry concern.", "trl": 8, "market_growth_potential": 3, "strategic_fit": 4, "commercialization_timeline_years": "0-1 (mature)", "cost_tier": "Low-Medium", "safety_regulatory_complexity": 1, "technical_feasibility": 5, "competitive_intensity": 3, "revenue_impact_tier": "Low", "ip_potential": 2, "sustainability_impact": 1, "partnership_opportunities": "Colleges/universities with VR labs, industrial-training VR vendors.", "evidence_source": "Kinectrics public job posting focus-area list", "confidence": "ESTIMATED", "composite_score": 46.66666666666666, "rank": 10, "cost_numeric": 2, "revenue_numeric": 1, "timeline_years_numeric": 0.5}, {"tech_id": "T13", "technology_name": "Advanced Fission (Generation IV, non-SMR)", "category": "Reactor Technology", "problem_addressed": "Conventional light-water reactor designs have limits on fuel efficiency, waste volume, and operating temperature for industrial-heat applications; Gen IV designs (molten salt, sodium-cooled fast, high-temperature gas) target these gaps.", "trl": 4, "market_growth_potential": 3, "strategic_fit": 4, "commercialization_timeline_years": "7-15", "cost_tier": "High", "safety_regulatory_complexity": 5, "technical_feasibility": 3, "competitive_intensity": 3, "revenue_impact_tier": "High (long-term)", "ip_potential": 5, "sustainability_impact": 4, "partnership_opportunities": "Terrestrial Energy, university reactor-physics departments, CNL.", "evidence_source": "IAEA Nuclear Technology Review 2025 (fast reactors / advanced fuel cycle sections); public information on Terrestrial Energy's IMSR program", "confidence": "ESTIMATED", "composite_score": 38.37356321839081, "rank": 11, "cost_numeric": 5, "revenue_numeric": 4, "timeline_years_numeric": 11.0}, {"tech_id": "T07", "technology_name": "Smart Materials & Advanced Sensor Coatings", "category": "Materials Science", "problem_addressed": "Detecting corrosion, cracking, or radiation damage in structural materials early enough to act before failure.", "trl": 4, "market_growth_potential": 3, "strategic_fit": 4, "commercialization_timeline_years": "4-7", "cost_tier": "Medium-High", "safety_regulatory_complexity": 4, "technical_feasibility": 3, "competitive_intensity": 2, "revenue_impact_tier": "Low-Medium", "ip_potential": 4, "sustainability_impact": 3, "partnership_opportunities": "University materials-science departments, national labs.", "evidence_source": "Kinectrics public job posting focus-area list only \u2014 no independent technology-specific public source verified in this research pass", "confidence": "ASSUMPTION", "composite_score": 37.1580459770115, "rank": 12, "cost_numeric": 4, "revenue_numeric": 2, "timeline_years_numeric": 5.5}, {"tech_id": "T14", "technology_name": "Fusion Energy Technologies", "category": "Reactor Technology", "problem_addressed": "Achieving net-positive, commercially viable fusion power generation as a long-horizon clean firm-power source.", "trl": 3, "market_growth_potential": 4, "strategic_fit": 3, "commercialization_timeline_years": "10-20+", "cost_tier": "High", "safety_regulatory_complexity": 3, "technical_feasibility": 2, "competitive_intensity": 3, "revenue_impact_tier": "High (very long-term)", "ip_potential": 5, "sustainability_impact": 5, "partnership_opportunities": "General Fusion (Canadian), university plasma-physics departments, ITER-affiliated research networks.", "evidence_source": "IAEA Nuclear Technology Review 2025 (fusion research and technology development section); public information on General Fusion", "confidence": "ESTIMATED", "composite_score": 34.16666666666667, "rank": 13, "cost_numeric": 5, "revenue_numeric": 3, "timeline_years_numeric": 15.0}, {"tech_id": "T10", "technology_name": "Nuclear Waste Management Technologies", "category": "Waste & Decommissioning", "problem_addressed": "Long-term safe storage/disposal of used nuclear fuel and other radioactive waste, including siting and containment technology for permanent repositories.", "trl": 7, "market_growth_potential": 3, "strategic_fit": 4, "commercialization_timeline_years": "5-10+ (repository-scale)", "cost_tier": "High", "safety_regulatory_complexity": 5, "technical_feasibility": 4, "competitive_intensity": 1, "revenue_impact_tier": "Low (public-mandate program, not a commercial revenue play)", "ip_potential": 2, "sustainability_impact": 5, "partnership_opportunities": "NWMO, CNSC, geotechnical engineering firms, host-community organizations.", "evidence_source": "NWMO public program materials (deep geological repository); general public knowledge of international analogs (e.g., Finland's Onkalo)", "confidence": "ESTIMATED", "composite_score": 31.63793103448276, "rank": 14, "cost_numeric": 5, "revenue_numeric": 1, "timeline_years_numeric": 7.5}], "tornado": [{"criterion": "ip_potential", "base_weight": 0.08, "score_low": 75.86, "score_high": 78.54, "score_range": 2.68, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "competitive_intensity", "base_weight": 0.05, "score_low": 76.39, "score_high": 78.01, "score_range": 1.62, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "strategic_fit", "base_weight": 0.15, "score_low": 76.39, "score_high": 78.0, "score_range": 1.61, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "market_growth_potential", "base_weight": 0.12, "score_low": 76.58, "score_high": 77.82, "score_range": 1.24, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "technical_feasibility", "base_weight": 0.12, "score_low": 76.58, "score_high": 77.82, "score_range": 1.24, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "cost_numeric", "base_weight": 0.1, "score_low": 76.69, "score_high": 77.7, "score_range": 1.01, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "sustainability_impact", "base_weight": 0.07, "score_low": 76.79, "score_high": 77.61, "score_range": 0.82, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "timeline_years_numeric", "base_weight": 0.08, "score_low": 76.92, "score_high": 77.47, "score_range": 0.55, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "revenue_numeric", "base_weight": 0.13, "score_low": 77.13, "score_high": 77.26, "score_range": 0.13, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}, {"criterion": "safety_regulatory_complexity", "base_weight": 0.1, "score_low": 77.15, "score_high": 77.25, "score_range": 0.1, "top_ranked_techs_under_perturbation": null, "rank_fragile": false}]};
+const TECHS = DATA.technologies;
+const TORNADO = DATA.tornado;
+const CATS = [...new Set(TECHS.map(t => t.category))];
+
+const pages = [
+  {id:'overview', label:'Exec Overview'},
+  {id:'portfolio', label:'Ranked Portfolio'},
+  {id:'matrix', label:'TRL vs Market'},
+  {id:'cost', label:'Cost vs Impact'},
+  {id:'risk', label:'Risk Analysis'},
+];
+const nav = document.getElementById('nav');
+pages.forEach((p,i) => {
+  const b = document.createElement('button');
+  b.textContent = p.label; b.dataset.page = p.id;
+  if (i===0) b.classList.add('active');
+  b.onclick = () => showPage(p.id);
+  nav.appendChild(b);
+});
+
+function showPage(id) {
+  document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.page===id));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+}
+
+const catColors = {};
+const palette = ['#4fc3f7','#81c995','#f4a261','#e76f51','#c792ea','#ffd166','#48cae4','#f28482'];
+CATS.forEach((c,i) => catColors[c] = palette[i % palette.length]);
+
+function badge(conf) {
+  const cls = conf === 'VERIFIED' ? 'b-verified' : conf === 'ASSUMPTION' ? 'b-assumption' : 'b-estimated';
+  return `<span class="badge ${cls}">${conf}</span>`;
+}
+
+// ---------- Page: Overview ----------
+function renderOverview() {
+  const top = TECHS.find(t => t.rank === 1);
+  const avgTrl = (TECHS.reduce((s,t)=>s+t.trl,0)/TECHS.length).toFixed(1);
+  const el = document.getElementById('page-overview');
+  el.innerHTML = `
+    <div class="kpis">
+      <div class="kpi"><div class="val">${TECHS.length}</div><div class="lbl">Technologies evaluated</div></div>
+      <div class="kpi"><div class="val">${top.technology_name}</div><div class="lbl">#1 ranked opportunity</div></div>
+      <div class="kpi"><div class="val">${top.composite_score.toFixed(1)}</div><div class="lbl">Top composite score (of 100)</div></div>
+      <div class="kpi"><div class="val">${avgTrl}</div><div class="lbl">Average TRL across portfolio</div></div>
+    </div>
+    <div class="panel"><h3>All Technologies — Composite Score (weighted, normalized 0-100)</h3><canvas id="chartOverview"></canvas></div>
+    <div class="panel"><h3>Top 3 Summary</h3>
+      ${TECHS.filter(t=>t.rank<=3).map(t => `<p><b>#${t.rank} ${t.technology_name}</b> (${t.category}) — score ${t.composite_score.toFixed(1)}. ${t.problem_addressed} ${badge(t.confidence)}</p>`).join('')}
+    </div>`;
+  const ctx = document.getElementById('chartOverview');
+  const sorted = [...TECHS].sort((a,b)=>b.composite_score-a.composite_score);
+  new Chart(ctx, {
+    type:'bar',
+    data:{ labels: sorted.map(t=>t.technology_name),
+      datasets:[{ label:'Composite Score', data: sorted.map(t=>t.composite_score),
+        backgroundColor: sorted.map(t=>catColors[t.category]) }]},
+    options:{ indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{ x:{ max:100, ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} }, y:{ ticks:{color:'#e8edf2'}, grid:{display:false} } } }
+  });
+}
+
+// ---------- Page: Portfolio (table + filters) ----------
+function renderPortfolio() {
+  const el = document.getElementById('page-portfolio');
+  el.innerHTML = `
+    <div class="filters">
+      <select id="fCat"><option value="">All categories</option>${CATS.map(c=>`<option>${c}</option>`).join('')}</select>
+      <select id="fConf"><option value="">All confidence levels</option><option>VERIFIED</option><option>ESTIMATED</option><option>ASSUMPTION</option></select>
+      <select id="fCost"><option value="">All cost tiers</option><option>Low</option><option>Low-Medium</option><option>Medium</option><option>Medium-High</option><option>High</option></select>
+    </div>
+    <div class="panel"><table id="portfolioTable">
+      <thead><tr><th>Rank</th><th>Technology</th><th>Category</th><th>TRL</th><th>Cost Tier</th><th>Score</th><th>Confidence</th></tr></thead>
+      <tbody></tbody>
+    </table></div>`;
+  function draw() {
+    const cat = document.getElementById('fCat').value;
+    const conf = document.getElementById('fConf').value;
+    const cost = document.getElementById('fCost').value;
+    let rows = TECHS.filter(t => (!cat||t.category===cat) && (!conf||t.confidence===conf) && (!cost||t.cost_tier===cost));
+    rows = rows.sort((a,b)=>a.rank-b.rank);
+    document.querySelector('#portfolioTable tbody').innerHTML = rows.map(t => `
+      <tr onclick="showProfile('${t.tech_id}')" style="cursor:pointer">
+        <td>${t.rank}</td><td>${t.technology_name}</td><td>${t.category}</td><td>${t.trl}</td>
+        <td>${t.cost_tier}</td><td>${t.composite_score.toFixed(1)}</td><td>${badge(t.confidence)}</td>
+      </tr>`).join('');
+  }
+  ['fCat','fConf','fCost'].forEach(id => document.getElementById(id).onchange = draw);
+  draw();
+}
+
+// ---------- Page: TRL vs Market matrix ----------
+function renderMatrix() {
+  const el = document.getElementById('page-matrix');
+  el.innerHTML = `<div class="panel"><h3>Technology Readiness Level vs. Market Growth Potential (bubble size = composite score)</h3><canvas id="chartMatrix"></canvas></div>`;
+  const datasets = CATS.map(cat => ({
+    label: cat,
+    data: TECHS.filter(t=>t.category===cat).map(t => ({x:t.trl, y:t.market_growth_potential, r: 6 + t.composite_score/6, name:t.technology_name})),
+    backgroundColor: catColors[cat] + 'cc',
+  }));
+  new Chart(document.getElementById('chartMatrix'), {
+    type:'bubble', data:{datasets},
+    options:{ plugins:{ tooltip:{ callbacks:{ label: (c)=> `${c.raw.name}: TRL ${c.raw.x}, Market ${c.raw.y}` } } },
+      scales:{ x:{ title:{display:true,text:'TRL (1-9)',color:'#9fb0c0'}, min:0,max:10, ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} },
+               y:{ title:{display:true,text:'Market Growth Potential (1-5)',color:'#9fb0c0'}, min:0,max:6, ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} } } }
+  });
+}
+
+// ---------- Page: Cost vs Impact ----------
+function renderCost() {
+  const el = document.getElementById('page-cost');
+  el.innerHTML = `<div class="panel"><h3>Implementation Cost Tier vs. Revenue/Cost-Saving Impact (bubble size = composite score)</h3><canvas id="chartCost"></canvas></div>`;
+  const datasets = CATS.map(cat => ({
+    label: cat,
+    data: TECHS.filter(t=>t.category===cat).map(t => ({x:t.cost_numeric, y:t.revenue_numeric, r: 6 + t.composite_score/6, name:t.technology_name})),
+    backgroundColor: catColors[cat] + 'cc',
+  }));
+  new Chart(document.getElementById('chartCost'), {
+    type:'bubble', data:{datasets},
+    options:{ plugins:{ tooltip:{ callbacks:{ label:(c)=> `${c.raw.name}: cost tier ${c.raw.x}, impact tier ${c.raw.y}` } } },
+      scales:{ x:{ title:{display:true,text:'Cost Tier (1=Low ... 5=High)',color:'#9fb0c0'}, min:0,max:6, ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} },
+               y:{ title:{display:true,text:'Revenue/Cost-Saving Tier (1=Low ... 5=High)',color:'#9fb0c0'}, min:0,max:6, ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} } } }
+  });
+}
+
+// ---------- Page: Risk analysis ----------
+function renderRisk() {
+  const el = document.getElementById('page-risk');
+  const sorted = [...TECHS].sort((a,b)=>b.rank-a.rank).reverse();
+  function cellColor(v){ const t = (v-1)/4; const r = Math.round(80+t*175); const g = Math.round(200-t*140); return `rgb(${r},${g},90)`; }
+  el.innerHTML = `
+    <div class="panel"><h3>Risk Heat Map — Safety/Regulatory Complexity & Competitive Intensity (1=lowest risk, 5=highest)</h3>
+    <table><thead><tr><th>Technology</th><th>Safety/Regulatory Complexity</th><th>Competitive Intensity</th></tr></thead>
+    <tbody>${sorted.map(t=>`<tr><td>${t.technology_name}</td>
+      <td class="risk-cell" style="background:${cellColor(t.safety_regulatory_complexity)}">${t.safety_regulatory_complexity}</td>
+      <td class="risk-cell" style="background:${cellColor(t.competitive_intensity)}">${t.competitive_intensity}</td></tr>`).join('')}</tbody></table></div>
+    <div class="panel"><h3>Sensitivity Analysis — Score Range of #1-Ranked Technology Under ±20% Weight Perturbation</h3><canvas id="chartTornado"></canvas>
+    <p style="color:var(--muted);font-size:12px;margin-top:10px;">None of the 10 scoring criteria change the #1-ranked technology when perturbed ±20% individually &mdash; the base-case ranking is stable. Full detail in <code>data/tornado_summary.csv</code> and <code>data/sensitivity_analysis.csv</code>.</p></div>`;
+  const tSorted = [...TORNADO].sort((a,b)=>b.score_range-a.score_range);
+  new Chart(document.getElementById('chartTornado'), {
+    type:'bar',
+    data:{ labels: tSorted.map(t=>t.criterion),
+      datasets:[{ label:'Score range (points)', data: tSorted.map(t=>t.score_range), backgroundColor:'#4fc3f7' }]},
+    options:{ indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{ x:{ ticks:{color:'#9fb0c0'}, grid:{color:'#2b3947'} }, y:{ ticks:{color:'#e8edf2'}, grid:{display:false} } } }
+  });
+}
+
+// ---------- Page: Technology profile (drill-through) ----------
+function showProfile(techId) {
+  const t = TECHS.find(x=>x.tech_id===techId);
+  const el = document.getElementById('page-profile');
+  el.innerHTML = `
+    <button class="close-btn" onclick="showPage('portfolio')">&larr; Back to portfolio</button>
+    <div class="panel">
+      <h3>${t.technology_name} ${badge(t.confidence)}</h3>
+      <p>${t.problem_addressed}</p>
+      <div>
+        <span class="tag">Category: ${t.category}</span>
+        <span class="tag">Rank #${t.rank} of ${TECHS.length}</span>
+        <span class="tag">Composite score: ${t.composite_score.toFixed(1)}</span>
+        <span class="tag">TRL: ${t.trl}</span>
+        <span class="tag">Cost tier: ${t.cost_tier}</span>
+        <span class="tag">Revenue/impact tier: ${t.revenue_impact_tier}</span>
+        <span class="tag">Timeline: ${t.commercialization_timeline_years}</span>
+      </div>
+      <p style="margin-top:14px;"><b>Partnership opportunities:</b> ${t.partnership_opportunities}</p>
+      <p><b>Evidence source:</b> ${t.evidence_source}</p>
+    </div>`;
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+}
+
+renderOverview();
+renderPortfolio();
+renderMatrix();
+renderCost();
+renderRisk();
+</script>
+</body>
+</html>

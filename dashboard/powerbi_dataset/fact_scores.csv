@@ -1,0 +1,15 @@
+tech_id,technology_name,category,trl,market_growth_potential,strategic_fit,commercialization_timeline_years,timeline_years_numeric,cost_tier,cost_numeric,safety_regulatory_complexity,technical_feasibility,competitive_intensity,revenue_impact_tier,revenue_numeric,ip_potential,sustainability_impact,composite_score,rank
+T01,AI/ML for Predictive Maintenance,Digital / Analytics,7,5,5,1-2,1.5,Low,1,2,5,4,Medium-High,4,2,3,77.19827586206897,1
+T08,Advanced Sensor Technologies (Radiation & Structural),Materials Science,6,4,5,1-3,2.0,Low-Medium,2,3,5,3,Medium,3,3,2,65.25574712643679,2
+T12,Small Modular Reactors (SMRs),Reactor Technology,6,5,5,"2-5 (first units), 5-10 (fleet scale)",5.5,High,5,5,4,4,High,5,4,4,63.82471264367816,3
+T02,Robotic Nuclear Inspection Systems,Robotics / Inspection,8,4,5,0-1 (mature),0.5,Medium,3,3,5,3,Medium,3,3,2,63.58333333333333,4
+T04,Digital Twins for Nuclear Plants,Digital / Analytics,6,5,5,2-4,3.0,Medium-High,4,3,4,3,Medium,3,3,3,63.45402298850574,5
+T03,Inspection & Survey Drones (UAV/UUV),Robotics / Inspection,8,4,5,0-1 (mature),0.5,Low,1,3,5,3,Low-Medium,2,2,2,62.66666666666666,6
+T06,Additive Manufacturing (AM) for Nuclear Components,Advanced Manufacturing,6,4,5,2-5,3.5,Medium,3,5,3,2,Medium,3,4,3,55.01149425287357,7
+T09,Medical Isotope Production,Medical / Isotopes,9,4,4,"0-1 (mature, with newer isotopes at earlier stage)",0.5,High,5,5,4,3,High,5,3,2,48.583333333333336,8
+T11,Decommissioning Technologies,Waste & Decommissioning,7,4,4,1-3,2.0,High,5,5,4,2,Medium-High,4,2,4,47.00574712643678,9
+T05,VR/AR Workforce Training,Digital / Analytics,8,3,4,0-1 (mature),0.5,Low-Medium,2,1,5,3,Low,1,2,1,46.66666666666666,10
+T13,"Advanced Fission (Generation IV, non-SMR)",Reactor Technology,4,3,4,7-15,11.0,High,5,5,3,3,High (long-term),4,5,4,38.37356321839081,11
+T07,Smart Materials & Advanced Sensor Coatings,Materials Science,4,3,4,4-7,5.5,Medium-High,4,4,3,2,Low-Medium,2,4,3,37.1580459770115,12
+T14,Fusion Energy Technologies,Reactor Technology,3,4,3,10-20+,15.0,High,5,3,2,3,High (very long-term),3,5,5,34.16666666666667,13
+T10,Nuclear Waste Management Technologies,Waste & Decommissioning,7,3,4,5-10+ (repository-scale),7.5,High,5,5,4,1,"Low (public-mandate program, not a commercial revenue play)",1,2,5,31.63793103448276,14
