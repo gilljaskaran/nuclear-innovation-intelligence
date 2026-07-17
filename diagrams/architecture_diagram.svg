@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5B6B7A"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" fill="#FFFFFF"/>
+  <text x="30" y="40" font-size="22" font-weight="700" fill="#0B1F3A">Nuclear &amp; Clean-Energy Innovation Opportunity Intelligence Platform — Architecture</text>
+  <text x="30" y="62" font-size="13" fill="#5B6B7A" font-style="italic">Data flow from public sources to decision-support outputs</text>
+
+  <!-- Row 1: Sources -->
+  <g>
+    <rect x="30" y="90" width="1140" height="90" rx="10" fill="#F2F5FA" stroke="#D9E1EC"/>
+    <text x="50" y="112" font-size="13" font-weight="700" fill="#0B1F3A">1. PUBLIC DATA SOURCES</text>
+    <text x="50" y="135" font-size="12" fill="#1B2733">IAEA (PRIS, Nuclear Technology Review) · OECD NEA (SMR Dashboard) · CNSC · NRCan · DOE/OSTI · NWMO · OpenAlex / arXiv · Lens.org</text>
+    <text x="50" y="155" font-size="11" fill="#5B6B7A" font-style="italic">Every field traces to data/source_register.csv, tagged VERIFIED / ESTIMATED / ASSUMPTION</text>
+  </g>
+
+  <line x1="600" y1="180" x2="600" y2="205" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: three parallel boxes -->
+  <g>
+    <rect x="30" y="210" width="360" height="140" rx="10" fill="#0B1F3A"/>
+    <text x="50" y="235" font-size="13" font-weight="700" fill="#EE964B">2a. STRUCTURED DATASET</text>
+    <text x="50" y="260" font-size="11.5" fill="#CADCFC">src/build_dataset.py</text>
+    <text x="50" y="280" font-size="11.5" fill="#CADCFC">14 technologies × 15 fields</text>
+    <text x="50" y="300" font-size="11.5" fill="#CADCFC">→ data/technologies.csv</text>
+    <text x="50" y="320" font-size="11.5" fill="#CADCFC">+ data_dictionary.md</text>
+    <text x="50" y="338" font-size="11.5" fill="#CADCFC">+ source_register.csv</text>
+  </g>
+
+  <g>
+    <rect x="420" y="210" width="360" height="140" rx="10" fill="#0B1F3A"/>
+    <text x="440" y="235" font-size="13" font-weight="700" fill="#EE964B">2b. RESEARCH CORPUS</text>
+    <text x="440" y="260" font-size="11.5" fill="#CADCFC">src/build_corpus.py</text>
+    <text x="440" y="280" font-size="11.5" fill="#CADCFC">34 real, source-linked docs</text>
+    <text x="440" y="300" font-size="11.5" fill="#CADCFC">→ data/research_corpus.csv</text>
+    <text x="440" y="320" font-size="11.5" fill="#CADCFC">(openalex_pull_template.py:</text>
+    <text x="440" y="338" font-size="11.5" fill="#CADCFC">full-scale API version)</text>
+  </g>
+
+  <g>
+    <rect x="810" y="210" width="360" height="140" rx="10" fill="#0B1F3A"/>
+    <text x="830" y="235" font-size="13" font-weight="700" fill="#EE964B">2c. KINECTRICS FOCUS AREAS</text>
+    <text x="830" y="260" font-size="11.5" fill="#CADCFC">Public job posting</text>
+    <text x="830" y="280" font-size="11.5" fill="#CADCFC">defines the 14-technology</text>
+    <text x="830" y="300" font-size="11.5" fill="#CADCFC">scope and strategic-fit</text>
+    <text x="830" y="320" font-size="11.5" fill="#CADCFC">criterion in the scoring</text>
+    <text x="830" y="338" font-size="11.5" fill="#CADCFC">model (Section 3.2)</text>
+  </g>
+
+  <line x1="210" y1="350" x2="210" y2="380" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="350" x2="330" y2="380" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="990" y1="350" x2="330" y2="410" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="350" x2="750" y2="380" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: Scoring model + NLP -->
+  <g>
+    <rect x="30" y="385" width="480" height="115" rx="10" fill="#13315C"/>
+    <text x="50" y="410" font-size="13" font-weight="700" fill="#EE964B">3a. WEIGHTED SCORING MODEL</text>
+    <text x="50" y="432" font-size="11.5" fill="#CADCFC">src/scoring_model.py — min-max normalize, 10 weighted criteria,</text>
+    <text x="50" y="450" font-size="11.5" fill="#CADCFC">±20% sensitivity analysis per weight</text>
+    <text x="50" y="472" font-size="11.5" fill="#CADCFC">→ data/scored_technologies.csv, tornado_summary.csv</text>
+  </g>
+
+  <g>
+    <rect x="540" y="385" width="630" height="115" rx="10" fill="#13315C"/>
+    <text x="560" y="410" font-size="13" font-weight="700" fill="#EE964B">3b. NLP: TOPIC MODELING &amp; SEMANTIC SEARCH</text>
+    <text x="560" y="432" font-size="11.5" fill="#CADCFC">src/topic_modeling.py — TF-IDF vectorization, KMeans clustering</text>
+    <text x="560" y="450" font-size="11.5" fill="#CADCFC">(100% category purity), cosine-similarity search, source-linked summaries</text>
+    <text x="560" y="472" font-size="11.5" fill="#CADCFC">→ data/nlp_cluster_summary.csv, nlp_semantic_search_demo.csv</text>
+  </g>
+
+  <line x1="270" y1="500" x2="600" y2="530" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="855" y1="500" x2="600" y2="530" stroke="#5B6B7A" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 4: Outputs -->
+  <g>
+    <rect x="30" y="535" width="270" height="70" rx="10" fill="#F2F5FA" stroke="#D9E1EC"/>
+    <text x="45" y="560" font-size="12.5" font-weight="700" fill="#0B1F3A">Interactive Dashboard</text>
+    <text x="45" y="580" font-size="11" fill="#1B2733">Power BI data model + HTML preview</text>
+    <text x="45" y="596" font-size="10" fill="#5B6B7A">dashboard/</text>
+  </g>
+  <g>
+    <rect x="315" y="535" width="270" height="70" rx="10" fill="#F2F5FA" stroke="#D9E1EC"/>
+    <text x="330" y="560" font-size="12.5" font-weight="700" fill="#0B1F3A">Business Case &amp; Roadmap</text>
+    <text x="330" y="580" font-size="11" fill="#1B2733">Top-ranked opportunity, stage gates</text>
+    <text x="330" y="596" font-size="10" fill="#5B6B7A">deliverables/</text>
+  </g>
+  <g>
+    <rect x="600" y="535" width="270" height="70" rx="10" fill="#F2F5FA" stroke="#D9E1EC"/>
+    <text x="615" y="560" font-size="12.5" font-weight="700" fill="#0B1F3A">White Paper &amp; Market Assessment</text>
+    <text x="615" y="580" font-size="11" fill="#1B2733">Methodology, limitations, sources</text>
+    <text x="615" y="596" font-size="10" fill="#5B6B7A">deliverables/</text>
+  </g>
+  <g>
+    <rect x="885" y="535" width="285" height="70" rx="10" fill="#F2F5FA" stroke="#D9E1EC"/>
+    <text x="900" y="560" font-size="12.5" font-weight="700" fill="#0B1F3A">Exec Brief, Deck &amp; Risk Register</text>
+    <text x="900" y="580" font-size="11" fill="#1B2733">One-pager, 5-slide deck, xlsx</text>
+    <text x="900" y="596" font-size="10" fill="#5B6B7A">deliverables/</text>
+  </g>
+</svg>
