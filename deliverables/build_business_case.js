@@ -37,7 +37,7 @@ const doc = new Document({
       new Paragraph({ children: [new TextRun({ text: "Business Case", bold: true, size: 40, color: accent })], spacing: { after: 40 } }),
       new Paragraph({ children: [new TextRun({ text: "AI/ML-Based Predictive Maintenance for Nuclear Plant Equipment", size: 28 })], spacing: { after: 40 } }),
       new Paragraph({ children: [new TextRun({ text: "Nuclear & Clean-Energy Innovation Opportunity Intelligence Platform — Portfolio Project", italics: true, color: muted, size: 20 })], spacing: { after: 20 } }),
-      new Paragraph({ children: [new TextRun({ text: "Prepared by Karan Gill  |  July 2026", color: muted, size: 20 })], spacing: { after: 300 } }),
+      new Paragraph({ children: [new TextRun({ text: "Prepared by Jaskaran Singh  |  July 2026", color: muted, size: 20 })], spacing: { after: 300 } }),
 
       note("Independent portfolio research project. Not affiliated with, commissioned by, or reviewed by Kinectrics Inc. Figures marked \"illustrative\" are the author's estimates for demonstration purposes and are not derived from any Kinectrics-internal data. See data/data_dictionary.md and the technical white paper for the full confidence-labeling policy (VERIFIED / ESTIMATED / ASSUMPTION)."),
 
