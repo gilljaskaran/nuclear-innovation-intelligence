@@ -27,7 +27,7 @@ function iconCircle(slide, x, y, d, fill, label, labelColor) {
   s.addText("NUCLEAR  &  CLEAN-ENERGY  INNOVATION", { x: 0.7, y: 1.3, w: 11.9, h: 0.5, fontFace: "Calibri", fontSize: 15, color: AMBER, bold: true, charSpacing: 3 });
   s.addText("Opportunity Intelligence Platform", { x: 0.7, y: 1.8, w: 11.9, h: 1.4, fontFace: "Cambria", fontSize: 40, color: WHITE, bold: true });
   s.addText("Scoring, ranking, and building a business case for 14 emerging technologies relevant to nuclear innovation and business development.", { x: 0.7, y: 3.15, w: 10.3, h: 1.0, fontFace: "Calibri", fontSize: 16, color: ICE, italic: true });
-  s.addText("Karan Gill   |   Portfolio Project   |   July 2026", { x: 0.7, y: 5.15, w: 8, h: 0.5, fontFace: "Calibri", fontSize: 14, color: MUTED_ON_DARK });
+  s.addText("Jaskaran Singh   |   Portfolio Project   |   July 2026", { x: 0.7, y: 5.15, w: 8, h: 0.5, fontFace: "Calibri", fontSize: 14, color: MUTED_ON_DARK });
   s.addText("Independent research project — not affiliated with, commissioned by, or reviewed by any employer named within.", { x: 0.7, y: 6.85, w: 11.9, h: 0.4, fontFace: "Calibri", fontSize: 10, color: MUTED_ON_DARK, italic: true });
 }
 
