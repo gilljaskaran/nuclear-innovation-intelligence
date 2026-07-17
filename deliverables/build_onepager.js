@@ -33,7 +33,7 @@ const doc = new Document({ sections:[{
   properties:{ page:{...PAGE, margin:{top:900,bottom:900,left:900,right:900}} },
   children:[
     new Paragraph({ children:[new TextRun({text:"Nuclear & Clean-Energy Innovation Opportunity Intelligence Platform", bold:true, size:30, color:accent})], spacing:{after:40} }),
-    new Paragraph({ children:[new TextRun({text:"Executive Brief — One Page  |  Karan Gill  |  July 2026", italics:true, color:muted, size:19})], spacing:{after:200} }),
+    new Paragraph({ children:[new TextRun({text:"Executive Brief — One Page  |  Jaskaran Singh  |  July 2026", italics:true, color:muted, size:19})], spacing:{after:200} }),
 
     h("Purpose"),
     p("A decision-support platform that identifies, scores, and prioritizes 14 emerging nuclear and clean-energy technologies for research, investment, partnership, or commercialization — built as an independent portfolio project demonstrating the analytical workflow used by innovation and business-development teams in the nuclear sector."),
