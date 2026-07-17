@@ -56,7 +56,7 @@ const doc = new Document({ sections:[{
   children:[
     title("Technical White Paper"),
     new Paragraph({ children:[new TextRun({text:"Nuclear & Clean-Energy Innovation Opportunity Intelligence Platform", size:24})], spacing:{after:40} }),
-    new Paragraph({ children:[new TextRun({text:"Karan Gill  |  July 2026  |  Independent portfolio project", italics:true, color:muted, size:19})], spacing:{after:260} }),
+    new Paragraph({ children:[new TextRun({text:"Jaskaran Singh  |  July 2026  |  Independent portfolio project", italics:true, color:muted, size:19})], spacing:{after:260} }),
     note("Not affiliated with, commissioned by, or reviewed by Kinectrics Inc. All company/technology names are used for illustrative, educational purposes based on public information."),
 
     h1("1. Purpose and Scope"),
