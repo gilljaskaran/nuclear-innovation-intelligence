@@ -14,7 +14,7 @@ const doc = new Document({ sections:[{
   children:[
     title("Market Assessment"),
     new Paragraph({ children:[new TextRun({text:"Nuclear & Clean-Energy Innovation Opportunity Intelligence Platform", size:24})], spacing:{after:40} }),
-    new Paragraph({ children:[new TextRun({text:"Karan Gill  |  July 2026  |  Independent portfolio project", italics:true, color:muted, size:19})], spacing:{after:260} }),
+    new Paragraph({ children:[new TextRun({text:"Jaskaran Singh  |  July 2026  |  Independent portfolio project", italics:true, color:muted, size:19})], spacing:{after:260} }),
     note("This assessment reports only market signals independently found via public web search on 2026-07-17, each cited to its source. Where no specific, checkable figure could be found for a technology category, that gap is stated rather than filled with an invented number. This is directional market context to inform the scoring model's 'market growth potential' field, not a market-research firm's market-sizing report."),
 
     h1("1. Small Modular Reactors (SMR)"),
