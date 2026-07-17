@@ -58,4 +58,4 @@ The `deliverables/build_*.js` and `build_risk_register.py` scripts regenerate th
 
 ## Author
 
-Karan Gill — July 2026.
+Jaskaran Singh — July 2026.
